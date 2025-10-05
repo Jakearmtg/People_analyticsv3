@@ -25,8 +25,8 @@ const BarChartComponent: React.FC<BarChartProps> = ({ data, title, dataKey, name
             formatter={formatAsCurrency ? (value: number) => [currencyFormatter(value), 'Valor'] : undefined}
           />
           <Legend wrapperStyle={{ color: '#D1D5DB' }}/>
-          {/* FIX: Updated color to match new teal theme */}
-          <Bar dataKey={dataKey} fill="#14b8a6" />
+          {/* FIX: Updated color to match new theme */}
+          <Bar dataKey={dataKey} fill="#EFE91B" />
         </BarChart>
       </ResponsiveContainer>
     </ChartWrapper>

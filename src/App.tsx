@@ -1,4 +1,3 @@
-
 import React, { useState, useCallback, useEffect } from 'react';
 import { useHRData } from './hooks/useHRData';
 import Header from './components/Header';
@@ -55,7 +54,7 @@ const App: React.FC = () => {
             />
 
             {notification && (
-                 <div className="bg-teal-500 text-white text-center p-2 fixed top-16 w-full z-20">
+                 <div className="bg-teal-500 text-gray-900 font-semibold text-center p-2 fixed top-16 w-full z-20">
                     {notification}
                 </div>
             )}

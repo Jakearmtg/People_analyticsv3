@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { MonthlyData, ViewMode } from '../types';
 import MetricCard from './MetricCard';
@@ -29,7 +28,7 @@ const MonthlyView: React.FC<{ monthData: MonthlyData }> = ({ monthData }) => {
       <MetricCard title="Turnover" value={`${(turnover.rate * 100).toFixed(2)}%`} icon={<UserMinusIcon />} />
       <MetricCard title="Absenteísmo" value={`${absenteeism.rate.toFixed(2)}%`} icon={<CalendarIcon />} />
       <MetricCard title="Tempo Médio de Casa" value={`${averageTenure.observation}`} icon={<ClockIcon />} />
-      {/* FIX: Explicitly type the parameters of the reduce function to prevent them from being inferred as 'unknown'. */}
+      {/* Fix: Explicitly type the parameters of the reduce function to prevent them from being inferred as 'unknown'. */}
       <MetricCard title="Total Folha de Pag." value={formatCurrency(Object.values(payroll.byCostCenter).reduce((a: number, b: number) => a + b, 0))} icon={<CurrencyDollarIcon />} />
       
       <div className="col-span-1 md:col-span-2 lg:col-span-2">
@@ -61,7 +60,7 @@ const MonthlyView: React.FC<{ monthData: MonthlyData }> = ({ monthData }) => {
 };
 
 const GeneralView: React.FC<{ allData: Record<string, MonthlyData> }> = ({ allData }) => {
-    // FIX: Explicitly type the parameters of the sort function to ensure correct type inference for `sortedData`. This resolves errors where properties on `latestMonth` could not be accessed.
+    {/* Fix: Explicitly type the parameters of the sort function to ensure correct type inference for `sortedData`. This resolves errors where properties on `latestMonth` could not be accessed. */}
     const sortedData = Object.values(allData).sort((a: MonthlyData, b: MonthlyData) => {
         const [aMonth, aYear] = a.monthYear.split('/');
         const [bMonth, bYear] = b.monthYear.split('/');

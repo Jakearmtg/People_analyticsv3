@@ -7,8 +7,8 @@ interface PieChartProps {
   title: string;
 }
 
-// FIX: Updated color palette to start with the new teal theme color.
-const COLORS = ['#14b8a6', '#38BDF8', '#FBBF24', '#A78BFA', '#F472B6'];
+// FIX: Updated color palette to start with the new theme color.
+const COLORS = ['#EFE91B', '#38BDF8', '#FBBF24', '#A78BFA', '#F472B6'];
 
 const PieChartComponent: React.FC<PieChartProps> = ({ data, title }) => {
   return (

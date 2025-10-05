@@ -1,4 +1,3 @@
-
 import React, { useRef } from 'react';
 import { UploadIcon } from './icons';
 
@@ -31,7 +30,7 @@ export const Welcome: React.FC<WelcomeProps> = ({ onFileChange }) => {
             />
             <button
                 onClick={handleUploadClick}
-                className="flex items-center space-x-3 bg-teal-600 hover:bg-teal-500 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105"
+                className="flex items-center space-x-3 bg-teal-500 hover:bg-teal-600 text-gray-900 font-bold py-3 px-8 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105"
             >
                 <UploadIcon className="h-6 w-6" />
                 <span>Carregar primeiro arquivo CSV</span>

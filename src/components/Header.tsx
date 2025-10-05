@@ -1,4 +1,3 @@
-
 import React, { useRef } from 'react';
 import { UploadIcon, ChartBarIcon } from './icons';
 
@@ -58,7 +57,7 @@ const Header: React.FC<HeaderProps> = ({ onFileChange, availableMonths, selected
                         />
                         <button
                             onClick={handleUploadClick}
-                            className="flex items-center space-x-2 bg-teal-600 hover:bg-teal-500 text-white font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out transform hover:scale-105"
+                            className="flex items-center space-x-2 bg-teal-500 hover:bg-teal-600 text-gray-900 font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out transform hover:scale-105"
                         >
                             <UploadIcon className="h-5 w-5" />
                             <span className="hidden sm:inline">Carregar CSV</span>
