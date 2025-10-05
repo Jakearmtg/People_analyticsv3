@@ -79,7 +79,7 @@ const GeneralView: React.FC<{ allData: Record<string, MonthlyData> }> = ({ allDa
             <div className="col-span-1 lg:col-span-2 xl:col-span-3">
                 <h2 className="text-2xl font-bold mb-4 text-white">Tendências ao Longo do Tempo</h2>
             </div>
-            <LineChartComponent data={turnoverTrend} title="Evolução do Turnover (%)" lines={[{ key: 'Turnover', color: '#14B8A6' }]} />
+            <LineChartComponent data={turnoverTrend} title="Evolução do Turnover (%)" lines={[{ key: 'Turnover', color: '#efe91b' }]} />
             <LineChartComponent data={hiringTrend} title="Admissões vs. Desligamentos" lines={[{ key: 'Admissões', color: '#38BDF8' }, { key: 'Desligamentos', color: '#F472B6' }]} />
             <LineChartComponent data={payrollTrend} title="Custo Total da Folha" lines={[{ key: 'Custo', color: '#FBBF24' }]} formatAsCurrency />
 
