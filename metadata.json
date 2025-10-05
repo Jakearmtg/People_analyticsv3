@@ -1,0 +1,5 @@
+{
+  "name": "HR KPI Dashboard",
+  "description": "An interactive dashboard to visualize monthly HR metrics from a CSV file. Upload your monthly report to track key performance indicators like turnover, absenteeism, payroll costs, and employee demographics over time.",
+  "requestFramePermissions": []
+}
