@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { MonthlyData, ViewMode } from '../types';
 import MetricCard from './MetricCard';
@@ -29,7 +28,7 @@ const MonthlyView: React.FC<{ monthData: MonthlyData }> = ({ monthData }) => {
       <MetricCard title="Turnover" value={`${(turnover.rate * 100).toFixed(2)}%`} icon={<UserMinusIcon />} />
       <MetricCard title="Absenteísmo" value={`${absenteeism.rate.toFixed(2)}%`} icon={<CalendarIcon />} />
       <MetricCard title="Tempo Médio de Casa" value={`${averageTenure.observation}`} icon={<ClockIcon />} />
-      {/* FIX: Explicitly type the parameters of the reduce function to prevent them from being inferred as 'unknown'. */}
+      {/* FIX: Explicitly typed the parameters of the reduce function to prevent them from being inferred as 'unknown'. */}
       <MetricCard title="Total Folha de Pag." value={formatCurrency(Object.values(payroll.byCostCenter).reduce((a: number, b: number) => a + b, 0))} icon={<CurrencyDollarIcon />} />
       
       <div className="col-span-1 md:col-span-2 lg:col-span-2">
@@ -79,7 +78,8 @@ const GeneralView: React.FC<{ allData: Record<string, MonthlyData> }> = ({ allDa
             <div className="col-span-1 lg:col-span-2 xl:col-span-3">
                 <h2 className="text-2xl font-bold mb-4 text-white">Tendências ao Longo do Tempo</h2>
             </div>
-            <LineChartComponent data={turnoverTrend} title="Evolução do Turnover (%)" lines={[{ key: 'Turnover', color: '#efe91b' }]} />
+            {/* FIX: Updated color to match new teal theme */}
+            <LineChartComponent data={turnoverTrend} title="Evolução do Turnover (%)" lines={[{ key: 'Turnover', color: '#14b8a6' }]} />
             <LineChartComponent data={hiringTrend} title="Admissões vs. Desligamentos" lines={[{ key: 'Admissões', color: '#38BDF8' }, { key: 'Desligamentos', color: '#F472B6' }]} />
             <LineChartComponent data={payrollTrend} title="Custo Total da Folha" lines={[{ key: 'Custo', color: '#FBBF24' }]} formatAsCurrency />
 

@@ -12,8 +12,9 @@ export default {
         'gray-700': '#2D2D2D',
         'gray-600': '#3C3C3C',
         'gray-400': '#9CA3AF',
-        'teal-500': '#efe91b',
-        'teal-600': '#d4c90d',
+        // FIX: Replaced yellow hex codes with actual teal colors for consistency.
+        'teal-500': '#14b8a6',
+        'teal-600': '#0d9488',
       },
     },
   },

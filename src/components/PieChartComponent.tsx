@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { ChartWrapper } from './ChartWrapper';
@@ -8,7 +7,8 @@ interface PieChartProps {
   title: string;
 }
 
-const COLORS = ['#efe91b', '#38BDF8', '#FBBF24', '#A78BFA', '#F472B6'];
+// FIX: Updated color palette to start with the new teal theme color.
+const COLORS = ['#14b8a6', '#38BDF8', '#FBBF24', '#A78BFA', '#F472B6'];
 
 const PieChartComponent: React.FC<PieChartProps> = ({ data, title }) => {
   return (
@@ -26,7 +26,7 @@ const PieChartComponent: React.FC<PieChartProps> = ({ data, title }) => {
             nameKey="name"
             label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
           >
-            {data.map((entry, index) => (
+            {data.map((_, index) => (
               <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
             ))}
           </Pie>

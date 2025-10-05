@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { ChartWrapper } from './ChartWrapper';
@@ -26,7 +25,8 @@ const BarChartComponent: React.FC<BarChartProps> = ({ data, title, dataKey, name
             formatter={formatAsCurrency ? (value: number) => [currencyFormatter(value), 'Valor'] : undefined}
           />
           <Legend wrapperStyle={{ color: '#D1D5DB' }}/>
-          <Bar dataKey={dataKey} fill="#efe91b" />
+          {/* FIX: Updated color to match new teal theme */}
+          <Bar dataKey={dataKey} fill="#14b8a6" />
         </BarChart>
       </ResponsiveContainer>
     </ChartWrapper>
